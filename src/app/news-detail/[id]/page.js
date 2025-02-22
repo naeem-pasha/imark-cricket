@@ -22,13 +22,11 @@ export default function ArticlePage({ params }) {
         // Unwrapping `params`
         const { id } = await params;
 
-        caches;
         const options = {
           method: "GET",
           url: `https://cricbuzz-cricket.p.rapidapi.com/news/v1/detail/${id}`,
           headers: {
-            "x-rapidapi-key":
-              "9ca2f5b645msh76c71a94a12a605p104281jsn5c6153e5d097",
+            "x-rapidapi-key": `${process.env.NEXT_PUBLIC_API_KEY_CRICBUZZ}`,
             "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com",
           },
         };
