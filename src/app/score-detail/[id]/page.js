@@ -46,6 +46,17 @@ export default function Page({ params }) {
   if (loading) {
     return <ScoreDetialSkeleton />;
   }
+  console.log(matchData.scoreCard[0]);
+  if (!matchData.scoreCard[0]) {
+    return (
+      <>
+        <MatchHeader matchHeader={matchData?.matchHeader} />
+        <h1 className="flex justify-center items-center">
+          match is not started yet
+        </h1>
+      </>
+    );
+  }
   return (
     <main className="min-h-screen bg-gray-50">
       <MatchHeader matchHeader={matchData?.matchHeader} />

@@ -83,7 +83,7 @@ const ScoreCards = () => {
   }
 
   return (
-    <div className="relative">
+    <div className="relative mt-3">
       {/* Scroll Buttons */}
       <ScrollButton
         direction="left"
